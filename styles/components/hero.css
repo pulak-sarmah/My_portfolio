@@ -1,0 +1,185 @@
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero__img {
+  border-radius: 50%;
+  width: 6.5rem;
+  height: 6rem;
+}
+
+.hero__subtitle {
+  color: var(--clr-slate600);
+  font-size: var(--size-base);
+  line-height: 0.9;
+}
+
+.hero__title {
+  color: var(--clr-slate400);
+  text-transform: uppercase;
+  font-size: var(--size-2xl);
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+}
+
+.hero__description {
+  max-width: 60ch;
+  font-size: var(--size-sm);
+  color: var(--clr-slate600);
+}
+
+.hero__btn {
+  text-transform: capitalize;
+  font-size: var(--size-sm);
+}
+.linkedin,
+.github {
+  color: var(--clr-blue);
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+.linkedin:hover,
+.github:hover {
+  color: hsl(219, 33%, 50%);
+}
+
+.typewriter-container {
+  height: 7vh;
+  overflow: hidden;
+}
+/* xxs */
+@media (min-width: 325px) {
+  .hero__title {
+    font-size: 2.1rem;
+  }
+  .typewriter-container {
+    height: 6vh;
+  }
+}
+/* xs */
+@media (min-width: 475px) {
+  .hero {
+    gap: 1.5rem;
+  }
+
+  .hero__img {
+    width: 7rem;
+    height: 6.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-lg);
+  }
+
+  .hero__title {
+    font-size: var(--size-5xl);
+  }
+
+  .hero__description {
+    font-size: var(--size-base);
+  }
+
+  .hero__btn {
+    font-size: var(--size-base);
+  }
+  .typewriter-container {
+    height: 10vh;
+    overflow: hidden;
+  }
+}
+
+/* sm */
+/* @media (min-width: 640px) {
+  
+} */
+
+/* md */
+/* @media (min-width: 768px) {
+  
+} */
+
+/* lg */
+@media (min-width: 1024px) {
+  .hero {
+    gap: 1.5rem;
+  }
+
+  .hero__img {
+    width: 9rem;
+    height: 8.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-2xl);
+  }
+
+  .hero__title {
+    font-size: var(--size-7xl);
+  }
+
+  .hero__description {
+    font-size: var(--size-lg);
+  }
+
+  .hero__btn {
+    font-size: var(--size-lg);
+  }
+
+  .linkedin,
+  .github {
+    font-size: 2rem;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .hero {
+    gap: 2rem;
+  }
+
+  .hero__img {
+    width: 10.5rem;
+    height: 9.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: var(--size-4xl);
+  }
+
+  .hero__title {
+    font-size: var(--size-9xl);
+  }
+
+  .hero__description {
+    font-size: var(--size-xl);
+  }
+
+  .hero__btn {
+    font-size: var(--size-xl);
+  }
+  .linkedin,
+  .github {
+    font-size: 2.5rem;
+  }
+  .typewriter-container {
+    height: 15vh;
+    overflow: hidden;
+  }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+  
+}
+  */

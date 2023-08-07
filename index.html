@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script
+      src="https://kit.fontawesome.com/d82f25853e.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta class="description" content="My Portfolio website" />
+    <meta class="keywords" content="web design,html,css,js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li><a class="header__link" href="#about">About</a></li>
+          <li><a class="header__link" href="#education"> Education</a></li>
+          <!-- <li><a class="header__link" href="#experience"> Experience</a></li> -->
+          <li><a class="header__link" href="#work"> Projects</a></li>
+          <li><a class="header__link" href="#contact"> Contact</a></li>
+          <li class="header__line"></li>
+          <li>
+            <button id="theme-toggle" class="header__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li><a class="header__resume btn" href="#"> Resume</a></li>
+        </ul>
+        <button class="header__bars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <!-- mobile navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li><a class="mobile-nav__link" href="#about">About</a></li>
+          <li><a class="mobile-nav__link" href="#education">Education</a></li>
+          <li><a class="mobile-nav__link" href="#work">Project</a></li>
+          <li><a class="mobile-nav__link" href="#contact">Contact</a></li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button id="theme-toggle" class="mobile-nav__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" href="#">Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end of navigation -->
+    <main>
+      <section class="hero container">
+        <img class="hero__img" src="/hero.jpg" alt="my hero image" />
+        <h2 class="hero__subtitle">
+          Hi, I'm pulak 👋🏻<br /><br />
+          I'm a
+        </h2>
+        <div class="typewriter-container">
+          <h1 class="hero__title" id="typewriter-heading">
+            <!-- place holder for type writting effect -->
+          </h1>
+        </div>
+
+        <p class="hero__description">
+          A passionate <strong>Frontend/Fullstack-MERN </strong> web developer
+          specialized in building stunning interactive
+          websites/applications.Also passionate about exploring the endless
+          possibilities of <strong>machine learning</strong> to unlock its
+          potential in revolutionizing industries and creating intelligent
+          solutions.
+        </p>
+        <a href="#" class="hero__btn btn">Reach out</a>
+
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/pulak-sarmah-a23035247/"
+            target="_blank"
+            class="link1"
+            ><i class="fa-brands fa-linkedin fa-2xl linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/pulak-sarmah"
+            target="_blank"
+            class="link2"
+            ><i class="fa-brands fa-github fa-2xl github"></i>
+          </a>
+        </div>
+      </section>
+      <section class="about container section" id="about">
+        <div class="about__content">
+          <h1 class="about__title">About</h1>
+          <p class="about__description">
+            Hello there, I'm Pulak a
+            <strong>Frontend/Fullstack-MERN </strong> web developer from
+            Assam,India. I wake up in the morning, grab a cup of tea, open up my
+            laptop and build things that live on the web every day.
+          </p>
+          <p class="about__description">
+            I thrive in dynamic and chllenging environments and constantly seek
+            opportunities to apply my knowledge and skills to solve complex
+            problems.
+          </p>
+          <hr class="hr" />
+          <h3 class="about__subtitle">Technologies</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="tech_icon/icons8-javascript-48.png"
+                  alt="JavaScript image"
+                />JavaScript (ES6+)
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-react-48.png"
+                  alt="React Image"
+                />
+                ReactJS
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-express-js-48.png"
+                  alt="Python image"
+                />ExpressJS
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-mongodb-48.png"
+                  alt="mongodb image"
+                />MongoDB
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-nodejs-48.png"
+                  alt="Node js image"
+                />NodeJS
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-nextjs-48.png"
+                  alt="NextJS iamge"
+                />NextJS
+              </li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="tech_icon/icons8-python-48.png"
+                  alt="Python image"
+                />Python
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-tensorflow-48.png"
+                  alt="Tensorfloe image"
+                />Tensorflow
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/pytorch.png"
+                  alt="PyTorch image"
+                />PyTorch
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/Scikit_earn.png"
+                  alt=" Scikit-learn image"
+                />Scikit-Learn
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-java-48.png"
+                  alt="java image"
+                />Java
+              </li>
+              <li class="about__list">
+                <img
+                  class="about__tech-img"
+                  src="/tech_icon/icons8-sql-64.png"
+                  alt="sql image"
+                />sql
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__img-wrapper">
+          <img
+            class="about__img lazy loading loaded"
+            src="https://fakeimg.pl/480x480?text=loading...."
+            data-src="/about.jpg"
+            alt="my Profile picture"
+          />
+        </div>
+      </section>
+      <section class="education container section" id="education">
+        <div class="education__content">
+          <h1 class="education__title">Education</h1>
+          <hr class="hr" />
+          <div class="education__item">
+            <h2 class="education__degree">
+              <strong>Master of Information Technology</strong>
+            </h2>
+            <p class="education__university">Tezpur University, Assam</p>
+            <p class="education__date">Graduated in June 2023</p>
+            <p class="education__percentage">79%</p>
+          </div>
+
+          <div class="education__item">
+            <h2 class="education__degree">
+              <strong>Master of Computer Applications</strong>
+            </h2>
+            <p class="education__university">
+              Rajiv Gandhi University, Arunachal Pradesh
+            </p>
+            <p class="education__date">Graduated in June 2021</p>
+            <p class="education__percentage">81%</p>
+          </div>
+
+          <div class="education__item">
+            <h2 class="education__degree">
+              <strong>Bachelor of Computer Application</strong>
+            </h2>
+            <p class="education__university">North Lakhimpur College, Assam</p>
+            <p class="education__date">Graduated in May 2018</p>
+            <p class="education__percentage">70%</p>
+          </div>
+
+          <div class="education__item">
+            <h2 class="education__degree">
+              <strong>HS,Science</strong>
+            </h2>
+            <p class="education__university">
+              Brahmaputra Valley Academy, Assam
+            </p>
+            <p class="education__date">Passed in May 2015</p>
+            <p class="education__percentage">70%</p>
+          </div>
+
+          <div class="education__item">
+            <h2 class="education__degree">
+              <strong>High School</strong>
+            </h2>
+            <p class="education__university">Harmoti Jatiya Vidyalaya, Assam</p>
+            <p class="education__date">Passed in May 2013</p>
+            <p class="education__percentage">68%</p>
+          </div>
+        </div>
+        <div class="education__animation" id="animationContainer"></div>
+      </section>
+      <!-- <section class="experience container section" id="experience">
+        <div class="experience__content">
+          <h1 class="experience__title">Experiences</h1>
+          <hr class="hr" />
+          <div class="experience__item"></div>
+        </div>
+      </section> -->
+      <section class="work container section" id="work">
+        <h2 class="work__title">Projects</h2>
+        <!-- <hr class="hr" /> -->
+        <div class="work__container">
+          <!-- project 1 -->
+          <h3 class="work__project-title">Demo project 1</h3>
+          <div class="work__img-wrapper work__image1">
+            <!-- <img src="/ml.jpg" alt="demo_website 1" /> -->
+            <div class="work__slide">
+              <img loading="lazy" src="/iras.jpeg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/blog.jpg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/ml.jpg" alt="demo_website 5" />
+            </div>
+          </div>
+          <div class="work__project work__content1">
+            <h3 class="work__project-subtitle">demo website</h3>
+            <p class="work__project-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Asperiores dignissimos repellat mollitia incidunt voluptas.
+              Officia reiciendis asperiores eum odit at illum vel ipsa aut.
+              Cumque assumenda maxime voluptatem unde molestias.
+            </p>
+            <p class="work__project-description2">
+              <a href="" target="_blank">View Github Repository</a>
+            </p>
+            <ul class="work__tech-list">
+              <li class="work__project-tech">Html</li>
+              <li class="work__project-tech">Css</li>
+              <li class="work__project-tech">JavaScript</li>
+              <li class="work__project-tech">React</li>
+              <li class="work__project-tech">NodeJS</li>
+              <li class="work__project-tech">NextJS</li>
+              <li class="work__project-tech">ExpressJS</li>
+              <li class="work__project-tech">MongoDB</li>
+            </ul>
+            <a class="btn work__project-btn" href="#">View Project</a>
+          </div>
+          <!-- project 2 -->
+          <h3 class="work__project-title">Demo project 2</h3>
+          <div class="work__img-wrapper work__image2">
+            <!-- <img src="/ml.jpg" alt="demo_website 2" /> -->
+            <div class="work__slide">
+              <img loading="lazy" src="/iras.jpeg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/blog.jpg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/ml.jpg" alt="demo_website 5" />
+            </div>
+          </div>
+          <div class="work__project work__project2">
+            <h3 class="work__project-subtitle">demo website</h3>
+            <p class="work__project-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Asperiores dignissimos repellat mollitia incidunt voluptas.
+              Officia reiciendis asperiores eum odit at illum vel ipsa aut.
+              Cumque assumenda maxime voluptatem unde molestias.
+            </p>
+            <p class="work__project-description2">
+              <a href="" target="_blank">View Github Repository</a>
+            </p>
+            <ul class="work__tech-list">
+              <li class="work__project-tech">Html</li>
+              <li class="work__project-tech">Css</li>
+              <li class="work__project-tech">JavaScript</li>
+              <li class="work__project-tech">React</li>
+              <li class="work__project-tech">NodeJS</li>
+              <li class="work__project-tech">NextJS</li>
+              <li class="work__project-tech">ExpressJS</li>
+              <li class="work__project-tech">MongoDB</li>
+            </ul>
+            <a class="btn work__project-btn" href="#">View Project</a>
+          </div>
+          <!-- project 3 -->
+          <h3 class="work__project-title">Demo project 1</h3>
+          <div class="work__img-wrapper work__image3">
+            <!-- <img src="/ml.jpg" alt="demo_website 1" /> -->
+            <div class="work__slide">
+              <img loading="lazy" src="/iras.jpeg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/blog.jpg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/ml.jpg" alt="demo_website 5" />
+            </div>
+          </div>
+          <div class="work__project work__content3">
+            <h3 class="work__project-subtitle">demo website</h3>
+            <p class="work__project-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Asperiores dignissimos repellat mollitia incidunt voluptas.
+              Officia reiciendis asperiores eum odit at illum vel ipsa aut.
+              Cumque assumenda maxime voluptatem unde molestias.
+            </p>
+            <p class="work__project-description2">
+              <a href="" target="_blank">View Github Repository</a>
+            </p>
+            <ul class="work__tech-list">
+              <li class="work__project-tech">Html</li>
+              <li class="work__project-tech">Css</li>
+              <li class="work__project-tech">JavaScript</li>
+              <li class="work__project-tech">React</li>
+              <li class="work__project-tech">NodeJS</li>
+              <li class="work__project-tech">NextJS</li>
+              <li class="work__project-tech">ExpressJS</li>
+              <li class="work__project-tech">MongoDB</li>
+            </ul>
+            <a class="btn work__project-btn" href="#">View Project</a>
+          </div>
+          <!-- project 4 -->
+          <h3 class="work__project-title">Demo project 1</h3>
+          <div class="work__img-wrapper work__image4">
+            <!-- <img src="/ml.jpg" alt="demo_website 1" /> -->
+            <div class="work__slide">
+              <img loading="lazy" src="/iras.jpeg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/blog.jpg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/ml.jpg" alt="demo_website 5" />
+            </div>
+          </div>
+          <div class="work__project work__content4">
+            <h3 class="work__project-subtitle">demo website</h3>
+            <p class="work__project-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Asperiores dignissimos repellat mollitia incidunt voluptas.
+              Officia reiciendis asperiores eum odit at illum vel ipsa aut.
+              Cumque assumenda maxime voluptatem unde molestias.
+            </p>
+            <p class="work__project-description2">
+              <a href="" target="_blank">View Github Repository</a>
+            </p>
+            <ul class="work__tech-list">
+              <li class="work__project-tech">Html</li>
+              <li class="work__project-tech">Css</li>
+              <li class="work__project-tech">JavaScript</li>
+              <li class="work__project-tech">React</li>
+              <li class="work__project-tech">NodeJS</li>
+              <li class="work__project-tech">NextJS</li>
+              <li class="work__project-tech">ExpressJS</li>
+              <li class="work__project-tech">MongoDB</li>
+            </ul>
+            <a class="btn work__project-btn" href="#">View Project</a>
+          </div>
+          <!-- project 5 -->
+          <h3 class="work__project-title">Demo project 5</h3>
+          <div class="work__img-wrapper work__image5">
+            <!-- <img class="work__slide" src="/ml.jpg" alt="demo_website 5" /> -->
+            <div class="work__slide">
+              <img loading="lazy" src="/iras.jpeg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/blog.jpg" alt="demo_website 5" />
+            </div>
+            <div class="work__slide">
+              <img loading="lazy" src="/ml.jpg" alt="demo_website 5" />
+            </div>
+          </div>
+          <div class="work__project work__content5">
+            <h3 class="work__project-subtitle">demo website</h3>
+            <p class="work__project-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Asperiores dignissimos repellat mollitia incidunt voluptas.
+              Officia reiciendis asperiores eum odit at illum vel ipsa aut.
+              Cumque assumenda maxime voluptatem unde molestias.
+            </p>
+            <p class="work__project-description2">
+              <a href="" target="_blank">View Github Repository</a>
+            </p>
+            <ul class="work__tech-list">
+              <li class="work__project-tech">Html</li>
+              <li class="work__project-tech">Css</li>
+              <li class="work__project-tech">JavaScript</li>
+              <li class="work__project-tech">React</li>
+              <li class="work__project-tech">NodeJS</li>
+              <li class="work__project-tech">NextJS</li>
+              <li class="work__project-tech">ExpressJS</li>
+              <li class="work__project-tech">MongoDB</li>
+            </ul>
+            <a class="btn work__project-btn" href="#">View Project</a>
+          </div>
+        </div>
+      </section>
+      <section class="contact container section" id="contact">
+        <h2 class="contact__title">Get In Contact</h2>
+        <p class="contact__description">
+          Whenever you are starting a project, have a business inquiries or just
+          want to say hi, my inbox is always open so feel free to reach out and
+          I will get back to you as soon as posible.
+        </p>
+        <a
+          class="contact__btn btn"
+          href="mailto:pulaksarmah333@gmail.com"
+          target="_blank"
+          >Reach Out</a
+        >
+      </section>
+    </main>
+
+    <footer class="footer container section">
+      <h3 class="footer__title">~Pulak~</h3>
+    </footer>
+
+    <div class="scroll-to-top" id="scrollToTop">
+      <a href="#" class="scroll-to-top__button">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
