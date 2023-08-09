@@ -55,16 +55,13 @@
 }
 
 .typewriter-container {
-  height: 7vh;
+  height: 2rem;
   overflow: hidden;
 }
 /* xxs */
 @media (min-width: 325px) {
   .hero__title {
     font-size: 2.1rem;
-  }
-  .typewriter-container {
-    height: 6vh;
   }
 }
 /* xs */
@@ -94,8 +91,7 @@
     font-size: var(--size-base);
   }
   .typewriter-container {
-    height: 10vh;
-    overflow: hidden;
+    height: 2.5rem;
   }
 }
 
@@ -140,6 +136,9 @@
   .github {
     font-size: 2rem;
   }
+  .typewriter-container {
+    height: 4rem;
+  }
 }
 
 /* xl */
@@ -172,14 +171,22 @@
   .github {
     font-size: 2.5rem;
   }
+
   .typewriter-container {
-    height: 15vh;
-    overflow: hidden;
+    height: 7rem;
   }
 }
 
 /* 2xl */
-/* @media (min-width: 1536px) {
-  
+@media (min-width: 1536px) {
+  .typewriter-container {
+    height: 10rem;
+  }
 }
-  */
+
+/* 3xl */
+@media (min-width: 1536px) {
+  .typewriter-container {
+    height: 18rem;
+  }
+}
