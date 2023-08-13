@@ -53,7 +53,6 @@
   color: var(--clr-slate400);
 }
 .about__img {
-  height: 30rem;
   width: 30rem;
   border-radius: 0.5em;
 }
@@ -107,7 +106,7 @@
     margin: 0 auto;
   }
   .about__img {
-    width: 35rem;
+    width: 30rem;
     height: 35rem;
   }
 }
@@ -115,7 +114,7 @@
 /* md */
 @media (min-width: 768px) {
   .about__img {
-    width: 35rem;
+    width: 30rem;
     height: 35rem;
   }
 }
@@ -155,10 +154,6 @@
 
 /* xl */
 @media (min-width: 1280px) {
-  .about__img {
-    width: 38rem;
-    height: 38rem;
-  }
   .about__content {
     gap: 2rem;
   }
