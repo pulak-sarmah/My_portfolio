@@ -176,17 +176,3 @@
     height: 7rem;
   }
 }
-
-/* 2xl */
-@media (min-width: 1536px) {
-  .typewriter-container {
-    height: 10rem;
-  }
-}
-
-/* 3xl */
-@media (min-width: 1536px) {
-  .typewriter-container {
-    height: 18rem;
-  }
-}
